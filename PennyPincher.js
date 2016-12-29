@@ -63,6 +63,9 @@ function mousePressed(){
   			updateAutoPennies();
   		}
   	}
+	if((mouseX > 500) && (mouseY < 5)){
+		pennies += 100;
+	}
 }
 
 function withinPenny(){
@@ -184,6 +187,7 @@ function PennyDisplay(){
 			this.basicDisplay();
 			this.noClickUpgradeDisplay();
 			line(10, 10, 90, 60);
+			line(90, 10, 10, 60);
 		}
 
 
