@@ -180,9 +180,10 @@ function PennyDisplay(){
 		}
 		else{
 			clickUpgradeCost = 999999999999999999999;
-			clickLevelBonus++;
+			clickLevelBonus == 4;
 			this.basicDisplay();
 			this.noClickUpgradeDisplay();
+			line(10, 10, 90, 60);
 		}
 
 
