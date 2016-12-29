@@ -178,10 +178,14 @@ function PennyDisplay(){
 			}
 
 		}
+		else{
+			clickUpgradeCost = 999999999999999999999;
+			clickLevelBonus++;
+			this.basicDisplay();
+			this.noClickUpgradeDisplay();
+		}
 
 
 	}
 
 }
-
-
