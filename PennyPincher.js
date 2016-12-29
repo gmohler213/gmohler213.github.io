@@ -77,7 +77,7 @@ function withinPenny(){
 
 function PennyDisplay(){
 	this.s = "Penny Count: " + pennies.toFixed(0);
-	this.perSecond = "Pennies Per Second: " + autoPennies;
+	this.perSecond = "Pennies Per Second: " + autoPennies.toFixed(1);
 	this.penny = clickLevelBonus + "¢";
 
 
@@ -86,7 +86,7 @@ function PennyDisplay(){
 		textSize(14);
 		fill(255);
 		text(this.s, cx - 50, cy+rad+50, 150, 80); //Penny count
-		text(this.perSecond, cx - 70, cy+rad+80, 150, 80)
+		text(this.perSecond, cx - 80, cy+rad+80, 175, 80)
 
 		fill(191, 105, 53); //copper
 		ellipse(cx, cy, cr, cr);
@@ -128,6 +128,7 @@ function PennyDisplay(){
 	
 	this.update = function(){
 		this.s = "Penny Count: " + pennies.toFixed(0);
+		this.perSecond = "Pennies Per Second: " + autoPennies.toFixed(1);
 	}
 
 	this.show = function(){
@@ -178,10 +179,19 @@ function PennyDisplay(){
 			}
 
 		}
+		else{
+			clickUpgradeCost = 999999999999999999999;
+			clickLevelBonus = 8;
+			this.basicDisplay();
+			this.noClickUpgradeDisplay();
+			line(10, 10, 90, 60);
+			line(90, 10, 10, 60);
+		}
 
 
 	}
 
 }
+
 
 
