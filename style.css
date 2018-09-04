@@ -20,8 +20,8 @@ h1, h2, h3 {
 }
 
 #header {
-	background-color: #000000;
-	color: #39FF14;
+	background-color: #66CCFF;
+	color: white;
 	text-align: center;
 	padding: 10px;
 }
@@ -33,6 +33,7 @@ h1, h2, h3 {
 #nav {
 	width: 230px;
 	float: left;
+	border: thin;
 }
 
 #nav ul {
@@ -47,6 +48,7 @@ h1, h2, h3 {
 #main {
 	width: 550px;
 	float: right;
+	border: thin;
 }
 
 #footer {
