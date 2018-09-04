@@ -1,6 +1,10 @@
 body {
 	background-color: #EEEEEE;
 	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items:top;
 }
 
 a {
@@ -13,7 +17,7 @@ h1, h2, h3 {
 }
 
 #container {
-	background-color: #FFFFFF;
+	padding: 10px;
 	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
@@ -27,13 +31,14 @@ h1, h2, h3 {
 }
 
 #content {
+	background-color: white;
+	overflow: hidden;
 	padding: 10px;
 }
 
 #nav {
 	width: 230px;
 	float: left;
-	border: thin;
 }
 
 #nav ul {
@@ -46,9 +51,14 @@ h1, h2, h3 {
 }
 
 #main {
-	width: 550px;
-	float: right;
+	width: 390px;
+	float: left;
 	border: thin;
+}
+
+#clock {
+	width: 160px;
+	float: right;
 }
 
 #footer {
