@@ -1,0 +1,22 @@
+{
+  "name": "card_dealer",
+  "version": "1.0.0",
+  "description": "deals cards",
+  "main": "cardServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmohler213/gmohler213.github.io.git"
+  },
+  "author": "Greg Mohler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmohler213/gmohler213.github.io/issues"
+  },
+  "homepage": "https://github.com/gmohler213/gmohler213.github.io#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
