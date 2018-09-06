@@ -9,7 +9,7 @@ body {
 
 a {
 	text-decoration: none;
-	color: #0000FF;
+	color: #FF0000;
 }
 
 h1, h2, h3 {
@@ -28,6 +28,10 @@ h1, h2, h3 {
 	color: white;
 	text-align: center;
 	padding: 10px;
+}
+
+#header a {
+	color: white;
 }
 
 #content {
