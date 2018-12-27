@@ -41,7 +41,7 @@ h1, h2, h3 {
 }
 
 #nav {
-	width: 230px;
+	width: 300px;
 	float: left;
 }
 
@@ -55,7 +55,7 @@ h1, h2, h3 {
 }
 
 #main {
-	width: 390px;
+	width: 320px;
 	float: left;
 	border: thin;
 }
