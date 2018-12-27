@@ -1,7 +1,7 @@
 var URI = prompt("Paste your public Spotify playlist's URI here:");
 var splitURI = URI.split(":");
-var userID = splitURI[1];
-var playlistID = splitURI[2];
+var userID = splitURI[2];
+var playlistID = splitURI[4];
 console.log(userID);
 console.log(playlistID)
 // var result;
