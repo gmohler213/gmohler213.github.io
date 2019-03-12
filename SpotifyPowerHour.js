@@ -29,7 +29,9 @@ function pregame(){
 			//reset functionality?
 		}
 	});
-	game();
+	Console.log("game starting...");
+	//game();
+	shot();
 }
 
 function shot(){
@@ -60,8 +62,9 @@ function shot(){
 }
 
 function game(){
+	//Wait 60 seconds and then call shot():
 	while(shots < 10){
-		minutePassed = (Math.round(date.getTime() / 1000*5) != time);
+		minutePassed = (Math.round(date.getTime() / 1000*5) != time;
 		if(minutePassed){
 			time = Math.round(date.getTime() / 1000*5;
 			shot();
