@@ -8,7 +8,7 @@ var minutePassed = false;
 var shots = 0;
 var beers = 0;
 var date = new Date();
-var time = d.getTime();
+var time = Math.round(date.getTime() / 1000*5);
 
 var audio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
 var specialAudio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
@@ -56,9 +56,9 @@ function shot(){
 }
 
 function draw(){
-	minutePassed = (Math.round(time / 1000*5) != minute);
+	minutePassed = (Math.round(date.getTime() / 1000*5) != time);
 	if(minutePassed){
-		minute = Math.round(time / 1000*5;
+		time = Math.round(date.getTime() / 1000*5;
 		shot();
 	}
 
