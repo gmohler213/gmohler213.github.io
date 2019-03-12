@@ -57,5 +57,5 @@ function draw(){
 	//every 60 seconds, call shot():
 	setTimeout(function() {
 		shot()
-	}, 1000);
+	}, 10000);
 }
