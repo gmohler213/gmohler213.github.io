@@ -50,18 +50,13 @@ function shot(){
 		//update text:
 		beerCount_HTML = "You've taken " + shots + " shots and consumed " + beers + " beers."
 	}
+	setTimeout(shot(), 5000);
 	
 }
 
-function setup(){
-
+function game(){
+	shot();
 }
-function main(){
-	while (shots < 10){
-		setTimeout(shot(), 10000);
-	}
-}
-main()
 // function draw(){
 // 	//every 60 seconds, call shot():
 	
