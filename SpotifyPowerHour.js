@@ -53,9 +53,19 @@ function shot(){
 	
 }
 
-function draw(){
-	//every 60 seconds, call shot():
-	setTimeout(function() {
-		shot()
-	}, 10000);
+function setup(){
+
 }
+function main(){
+	while (shots < 10){
+		setTimeout(shot(), 10000);
+	}
+}
+main()
+// function draw(){
+// 	//every 60 seconds, call shot():
+	
+// 	setTimeout(function() {
+// 		shot();
+// 	}, 10000);
+// }
