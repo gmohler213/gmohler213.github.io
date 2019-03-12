@@ -3,8 +3,12 @@ var instructions_HTML = document.getElementById("instructions");
 var startButton_HTML = document.getElementById("startButton");
 var startClicked = false;
 var pauseClicked = false;
+var minute = false;
+var minutePassed = false;
 var shots = 0;
 var beers = 0;
+var date = new Date();
+var time = d.getTime();
 
 var audio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
 var specialAudio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
@@ -23,7 +27,6 @@ function pregame(){
 			//reset functionality?
 		}
 	});
-
 	game();
 }
 
@@ -49,13 +52,16 @@ function shot(){
 		beers = Math.round(shots * 1.5 / 12 * 100) / 100;
 		//update text:
 		beerCount_HTML = "You've taken " + shots + " shots and consumed " + beers + " beers."
-	}
-	setTimeout(shot(), 5000);
-	
+	}	
 }
 
 function game(){
-	shot();
+	minutePassed = (Math.round(time / 1000*60) != minute);
+	if(minutePassed){
+		minute = Math.round(time / 1000*60;
+		shot();
+	}
+
 }
 // function draw(){
 // 	//every 60 seconds, call shot():
