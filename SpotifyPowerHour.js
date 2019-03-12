@@ -61,17 +61,17 @@ function shot(){
 	}
 }
 
-function game(){
-	//Wait 60 seconds and then call shot():
-	while(shots < 10){
-		minutePassed = (Math.round(date.getTime() / 1000*5) != time;
-		if(minutePassed){
-			time = Math.round(date.getTime() / 1000*5;
-			shot();
-		}
-	}
+// function game(){
+// 	//Wait 60 seconds and then call shot():
+// 	while(shots < 10){
+// 		minutePassed = (Math.round(date.getTime() / 1000*5) != time;
+// 		if(minutePassed){
+// 			time = Math.round(date.getTime() / 1000*5;
+// 			shot();
+// 		}
+// 	}
 
-}
+// }
 // function draw(){
 // 	//every 60 seconds, call shot():
 	
