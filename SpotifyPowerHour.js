@@ -55,10 +55,10 @@ function shot(){
 	}	
 }
 
-function game(){
-	minutePassed = (Math.round(time / 1000*60) != minute);
+function draw(){
+	minutePassed = (Math.round(time / 1000*5) != minute);
 	if(minutePassed){
-		minute = Math.round(time / 1000*60;
+		minute = Math.round(time / 1000*5;
 		shot();
 	}
 
