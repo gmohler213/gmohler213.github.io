@@ -58,7 +58,7 @@ function shot(){
 		//update text:
 		beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
 		beerCount_HTML.setAttribute(beersString);
-	}	
+	}
 }
 
 function game(){
