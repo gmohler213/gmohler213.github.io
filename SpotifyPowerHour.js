@@ -1,17 +1,59 @@
-var URI = prompt("Paste your public Spotify playlist's URI here:");
-var splitURI = URI.split(":");
-var userID = splitURI[2];
-var playlistID = splitURI[4];
+var beerCount_HTML = document.getElementById("beerCount");
+var instructions_HTML = document.getElementById("instructions");
+var startButton_HTML = document.getElementById("startButton");
+var startClicked = false;
+var pauseClicked = false;
+var shots = 0;
+var beers = 0;
 
-console.log(userID);
-console.log(playlistID)
+var audio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
+var specialAudio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
 
-var playerURI = "https://open.spotify.com/embed/user/" + userID + "/playlist/" + playlistID
+//When button is pressed, count down from 5 and then run game()
+function pregame(){
+	document.getElementById("startButton").addEventListener("click", function(){
+		if (!clicked){
+			startClicked = true;
+			//update beerCount:
+			beerCount_HTML = "You've taken " + shots + " shots and consumed " + beers + " beers."
+			//count down from 5:
+			game();
+		}
+		else{
+			//reset functionality?
+		}
+	});
 
-var ifrm = document.createElement('iframe');
+	game();
+}
 
-ifrm.setAttribute('id', 'spotifyPlayer');
+function shot(){
+	if (shots != 60){
+		//play sound:
+		audio.play();
+		//left click:
 
-document.body.appendChild(ifrm);
+		//increment drinks:
+		shots = shots + 1;
+		beers = Math.round(shots * 1.5 / 12 * 100) / 100;
+		//update text:
+		beerCount_HTML = "You've taken " + shots + " shots and consumed " + beers + " beers."
+	}
+	else{
+		//play sound:
+		specialAudio.play();
+		//left click:
 
-ifrm.setAttribute('src', playerURI);
+		//increment drinks:
+		shots = shots + 1;
+		beers = Math.round(shots * 1.5 / 12 * 100) / 100;
+		//update text:
+		beerCount_HTML = "You've taken " + shots + " shots and consumed " + beers + " beers."
+	}
+	
+}
+
+function draw(){
+	//every 60 seconds, call shot():
+	setTimeout(shot(), 500);
+}
