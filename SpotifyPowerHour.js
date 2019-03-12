@@ -9,6 +9,7 @@ var shots = 0;
 var beers = 0;
 var date = new Date();
 var time = Math.round(date.getTime() / 1000*5);
+var beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
 
 var audio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
 var specialAudio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
@@ -19,7 +20,8 @@ function pregame(){
 		if (!clicked){
 			startClicked = true;
 			//update beerCount:
-			beerCount_HTML = "You've taken " + shots + " shots and consumed " + beers + " beers."
+			beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
+			beerCount_HTML.setAttribute(beersString);
 			//count down from 5:
 			game();
 		}
@@ -40,7 +42,8 @@ function shot(){
 		shots = shots + 1;
 		beers = Math.round(shots * 1.5 / 12 * 100) / 100;
 		//update text:
-		beerCount_HTML = "You've taken " + shots + " shots and consumed " + beers + " beers."
+		beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
+		beerCount_HTML.setAttribute(beersString);
 	}
 	else{
 		//play sound:
@@ -51,15 +54,18 @@ function shot(){
 		shots = shots + 1;
 		beers = Math.round(shots * 1.5 / 12 * 100) / 100;
 		//update text:
-		beerCount_HTML = "You've taken " + shots + " shots and consumed " + beers + " beers."
+		beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
+		beerCount_HTML.setAttribute(beersString);
 	}	
 }
 
-function draw(){
-	minutePassed = (Math.round(date.getTime() / 1000*5) != time);
-	if(minutePassed){
-		time = Math.round(date.getTime() / 1000*5;
-		shot();
+function game(){
+	while(shots < 10){
+		minutePassed = (Math.round(date.getTime() / 1000*5) != time);
+		if(minutePassed){
+			time = Math.round(date.getTime() / 1000*5;
+			shot();
+		}
 	}
 
 }
