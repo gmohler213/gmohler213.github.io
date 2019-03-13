@@ -10,6 +10,7 @@ var beers = 0;
 var date = new Date();
 var time = Math.round(date.getTime() / 1000);
 var beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
+var t = 0;
 
 var audio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
 var specialAudio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
@@ -58,5 +59,5 @@ function shot(){
 }
 
 function game(){
-	var t = setInterval(shot(), 10000);
+	t = setInterval(shot(), 10000);
 }
