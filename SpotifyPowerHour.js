@@ -52,7 +52,7 @@ function shot(){
 }
 
 function game(){
-	setTimeout()
+	setTimeout(shot(), 10000);
 }
 
 // function game(){
