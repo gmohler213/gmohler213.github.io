@@ -19,7 +19,7 @@ document.getElementById("startButton").addEventListener("click", function(){
 			startClicked = true;
 			//update beerCount:
 			beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
-			beerCount_HTML.setAttribute(beersString);
+			beerCount_HTML.innerHTML = beersString;
 			//count down from 5:
 			//game();
 			Console.log("game starting...");
@@ -48,7 +48,7 @@ function shot(){
 		beers = Math.round(shots * 1.5 / 12 * 100) / 100;
 		//update text:
 		beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
-		beerCount_HTML.setAttribute(beersString);
+		bbeerCount_HTML.innerHTML = beersString;
 	}
 	else{
 		//play sound:
@@ -60,7 +60,7 @@ function shot(){
 		beers = Math.round(shots * 1.5 / 12 * 100) / 100;
 		//update text:
 		beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
-		beerCount_HTML.setAttribute(beersString);
+		beerCount_HTML.innerHTML = beersString;
 	}
 }
 
