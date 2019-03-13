@@ -23,8 +23,6 @@ document.getElementById("startButton").addEventListener("click", function(){
 		//count down from 5:
 		//game();
 		console.log("game starting...");
-		//game();
-		//shot();
 		game();
 	}
 	else{
@@ -33,6 +31,7 @@ document.getElementById("startButton").addEventListener("click", function(){
 });
 
 function shot(){
+	console.log("shot!");
 	if (shots != 60){
 		audio.play();
 	}
