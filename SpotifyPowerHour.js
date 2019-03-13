@@ -16,7 +16,7 @@ var specialAudio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
 
 document.getElementById("startButton").addEventListener("click", function(){
 	
-	alert("Hello!");
+	//alert("Hello!");
 	audio.play();
 
 		// if (!startClicked){
