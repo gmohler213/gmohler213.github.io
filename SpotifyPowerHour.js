@@ -22,7 +22,7 @@ document.getElementById("startButton").addEventListener("click", function(){
 		beerCount_HTML.innerHTML = beersString;
 		//count down from 5:
 		//game();
-		Console.log("game starting...");
+		console.log("game starting...");
 		//game();
 		shot();
 	}
