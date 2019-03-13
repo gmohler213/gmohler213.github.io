@@ -14,9 +14,7 @@ var beersString = "You've taken " + shots + " shots and consumed " + beers + " b
 var audio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
 var specialAudio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
 
-//When button is pressed, count down from 5 and then run game()
-function pregame(){
-	document.getElementById("startButton").addEventListener("click", function(){
+document.getElementById("startButton").addEventListener("click", function(){
 		if (!startClicked){
 			startClicked = true;
 			//update beerCount:
@@ -32,6 +30,10 @@ function pregame(){
 			//reset functionality?
 		}
 	});
+
+//When button is pressed, count down from 5 and then run game()
+function pregame(){
+	
 	
 }
 
