@@ -8,7 +8,7 @@ var minutePassed = false;
 var shots = 0;
 var beers = 0;
 var date = new Date();
-var time = Math.round(date.getTime() / 1000*5);
+var time = Math.round(date.getTime() / 1000);
 var beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
 
 var audio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
@@ -27,6 +27,13 @@ document.getElementById("startButton").addEventListener("click", function(){
 	}
 	else{
 		//reset functionality?
+	}
+});
+
+document.getElementById("pauseButton").addEventListener("click", function(){
+	clearInterval(t);
+	if (startClicked){
+		startClicked = false;
 	}
 });
 
@@ -51,24 +58,5 @@ function shot(){
 }
 
 function game(){
-	setTimeout(shot(), 10000);
+	var t = setInterval(shot(), 10000);
 }
-
-// function game(){
-// 	//Wait 60 seconds and then call shot():
-// 	while(shots < 10){
-// 		minutePassed = (Math.round(date.getTime() / 1000*5) != time;
-// 		if(minutePassed){
-// 			time = Math.round(date.getTime() / 1000*5;
-// 			shot();
-// 		}
-// 	}
-
-// }
-// function draw(){
-// 	//every 60 seconds, call shot():
-	
-// 	setTimeout(function() {
-// 		shot();
-// 	}, 10000);
-// }
