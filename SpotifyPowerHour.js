@@ -17,21 +17,22 @@ var specialAudio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
 //When button is pressed, count down from 5 and then run game()
 function pregame(){
 	document.getElementById("startButton").addEventListener("click", function(){
-		if (!clicked){
+		if (!startClicked){
 			startClicked = true;
 			//update beerCount:
 			beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
 			beerCount_HTML.setAttribute(beersString);
 			//count down from 5:
-			game();
+			//game();
+			Console.log("game starting...");
+			//game();
+			shot();
 		}
 		else{
 			//reset functionality?
 		}
 	});
-	Console.log("game starting...");
-	//game();
-	shot();
+	
 }
 
 function shot(){
