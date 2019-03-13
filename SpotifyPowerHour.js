@@ -47,7 +47,7 @@ function shot(){
 	console.log(beers);
 	//update text:
 	beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
-	bbeerCount_HTML.innerHTML = beersString;	
+	beerCount_HTML.innerHTML = beersString;	
 }
 
 // function game(){
