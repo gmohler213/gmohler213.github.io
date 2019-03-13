@@ -5,7 +5,7 @@ var startClicked = false;
 var pauseClicked = false;
 var minute = false;
 var minutePassed = false;
-var shots = 0;
+var shots = 1;
 var beers = 0;
 var date = new Date();
 var time = Math.round(date.getTime() / 1000*5);
@@ -15,56 +15,39 @@ var audio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
 var specialAudio = new Audio('https://gmohler213.github.io/AirHorn.mp3');
 
 document.getElementById("startButton").addEventListener("click", function(){
-	
-	audio.play();
-
-		// if (!startClicked){
-		// 	startClicked = true;
-		// 	//update beerCount:
-		// 	beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
-		// 	beerCount_HTML.innerHTML = beersString;
-		// 	//count down from 5:
-		// 	//game();
-		// 	Console.log("game starting...");
-		// 	//game();
-		// 	shot();
-		// }
-		// else{
-		// 	//reset functionality?
-		// }
+	if (!startClicked){
+		startClicked = true;
+		//update beerCount:
+		beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
+		beerCount_HTML.innerHTML = beersString;
+		//count down from 5:
+		//game();
+		Console.log("game starting...");
+		//game();
+		shot();
+	}
+	else{
+		//reset functionality?
+	}
 });
-
-//When button is pressed, count down from 5 and then run game()
-function pregame(){
-	
-	
-}
 
 function shot(){
 	if (shots != 60){
-		//play sound:
 		audio.play();
-		//left click:
-
-		//increment drinks:
-		shots = shots + 1;
-		beers = Math.round(shots * 1.5 / 12 * 100) / 100;
-		//update text:
-		beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
-		bbeerCount_HTML.innerHTML = beersString;
 	}
 	else{
-		//play sound:
 		specialAudio.play();
-		//left click:
-
-		//increment drinks:
-		shots = shots + 1;
-		beers = Math.round(shots * 1.5 / 12 * 100) / 100;
-		//update text:
-		beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
-		beerCount_HTML.innerHTML = beersString;
 	}
+
+	//left click:
+
+	//increment drinks:
+	shots = shots + 1;
+	beers = Math.round(shots * 1.5 / 12 * 100) / 100;
+	console.log(beers);
+	//update text:
+	beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
+	bbeerCount_HTML.innerHTML = beersString;	
 }
 
 // function game(){
