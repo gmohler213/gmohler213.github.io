@@ -59,5 +59,5 @@ function shot(){
 }
 
 function game(){
-	t = setInterval(shot(), 10000);
+	t = setInterval(shot(), 60);
 }
