@@ -5,7 +5,7 @@ var startClicked = false;
 var pauseClicked = false;
 var minute = false;
 var minutePassed = false;
-var shots = 1;
+var shots = 0;
 var beers = 0;
 var date = new Date();
 var time = Math.round(date.getTime() / 1000*5);
@@ -24,7 +24,8 @@ document.getElementById("startButton").addEventListener("click", function(){
 		//game();
 		console.log("game starting...");
 		//game();
-		shot();
+		//shot();
+		game();
 	}
 	else{
 		//reset functionality?
@@ -48,6 +49,10 @@ function shot(){
 	//update text:
 	beersString = "You've taken " + shots + " shots and consumed " + beers + " beers."
 	beerCount_HTML.innerHTML = beersString;	
+}
+
+function game(){
+	setTimeout()
 }
 
 // function game(){
